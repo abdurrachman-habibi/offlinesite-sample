@@ -1,0 +1,26 @@
+{
+  "name": "OfflineSite-Sample",
+  "version": "0.0.0",
+  "authors": [
+    "Habibi <guilvee@gmail.com>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.13",
+    "angular-material": "~0.8.1",
+    "angular-touch": "~1.3.13",
+    "angular-local-storage": "~0.1.5",
+    "angular-route": "~1.3.13"
+  }
+}

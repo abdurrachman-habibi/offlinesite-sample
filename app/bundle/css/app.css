@@ -1,0 +1,53 @@
+.view-animation.ng-enter {
+  -webkit-animation: fadeIn 0.6s;
+  -moz-animation: fadeIn 0.6s;
+  -o-animation: fadeIn 0.6s;
+  animation: fadeIn 0.6s;
+}
+
+.view-animation.ng-leave {
+  -webkit-animation: fadeOut 0.6s;
+  -moz-animation: fadeOut 0.6s;
+  -o-animation: fadeOut 0.6s;
+  animation: fadeOut 0.6s;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

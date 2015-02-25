@@ -1,0 +1,20 @@
+{
+  "name": "OfflineSite-Sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "start": "http-server ./app"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "",
+    "gulp-concat": "",
+    "gulp-concat-css": "^2.1.0",
+    "gulp-manifest": "",
+    "gulp-replace": "",
+    "gulp-uglify": "^1.1.0",
+    "http-server": ""
+  }
+}

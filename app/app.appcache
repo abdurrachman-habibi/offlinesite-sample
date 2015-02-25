@@ -1,0 +1,26 @@
+CACHE MANIFEST
+
+
+CACHE:
+index.html
+manifest-iframe.html
+templates/home.html
+templates/login.html
+bundle/js/app.js
+bundle/js/lib.js
+bundle/css/app.css
+bundle/css/lib.css
+
+
+NETWORK:
+*
+
+
+FALLBACK:
+/ /index.html
+
+
+SETTINGS:
+prefer-online
+
+# hash: 842c7fec9a589cbabd30bace6f7eb7f57cac07ebff61c601d7e8efbcbbabf75a
