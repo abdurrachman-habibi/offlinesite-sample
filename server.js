@@ -31,11 +31,22 @@ if (argv.h || argv.help) {
     process.exit();
 }
 
-var port = argv.p || parseInt(process.env.PORT, 10),
-    host = argv.a || '0.0.0.0',
-    log = (argv.s || argv.silent) ? (function () {}) : console.log,
-    ssl = !!argv.S || !!argv.ssl,
-    requestLogger;
+var root,port,host,log,ssl,requestLogger;
+
+if(process.env.NODE_ENV == "production"){
+    port = process.env.PORT;
+    host = "127.0.0.1";
+    log = console.log;
+    ssl = false;
+    root = "./app"
+}
+else{
+    port = argv.p || parseInt(process.env.PORT, 10);
+    host = argv.a || '0.0.0.0';
+    log = (argv.s || argv.silent) ? (function () {}) : console.log;
+    ssl = !!argv.S;
+    root = argv._[0];
+}
 
 if (!argv.s && !argv.silent) {
     requestLogger = function(req) {
@@ -55,7 +66,7 @@ if (!port) {
 
 function listen(port) {
     var options = {
-        root: './app',
+        root: root,
         cache: argv.c,
         showDir: argv.d,
         autoIndex: argv.i,

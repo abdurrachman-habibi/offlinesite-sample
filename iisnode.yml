@@ -1,0 +1,4 @@
+# The optional iisnode.yml file provides overrides of
+# the iisnode configuration settings specified in web.config.
+
+node_env: production
