@@ -5,27 +5,6 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var concatCss = require('gulp-concat-css');
 
-gulp.task('manifest', function () {
-    gulp.src([
-        'app/**/*.html',
-        'app/**/bundle/**/*.js',
-        'app/**/bundle/**/*.css',
-        'app/**/img/**',
-        'app/**/fonts/**'
-    ])
-        .pipe(manifest({
-            hash: true,
-            preferOnline: true,
-            network: ['*'],
-            filename: 'app.appcache',
-            exclude: ['app.appcache'],
-            fallback: [
-                '/ /index.html'
-            ]
-        }))
-        .pipe(gulp.dest('app'));
-});
-
 gulp.task('bundleLibJS', function () {
     gulp.src([
         'bower_components/angular/angular.min.js',
@@ -62,7 +41,28 @@ gulp.task('bundleCSS', function () {
         .pipe(gulp.dest('app/bundle/css'))
 });
 
-gulp.task('default', ['bundleJS', 'bundleLibJS', 'bundleCSS', 'bundleLibCSS', 'manifest'], function () {
+gulp.task('manifest', ['bundleJS', 'bundleLibJS', 'bundleCSS', 'bundleLibCSS'], function () {
+    gulp.src([
+        'app/**/*.html',
+        'app/**/bundle/**/*.js',
+        'app/**/bundle/**/*.css',
+        'app/**/img/**',
+        'app/**/fonts/**'
+    ])
+        .pipe(manifest({
+            hash: true,
+            preferOnline: true,
+            network: ['*'],
+            filename: 'app.appcache',
+            exclude: ['app.appcache'],
+            fallback: [
+                '/ /index.html'
+            ]
+        }))
+        .pipe(gulp.dest('app'));
+});
+
+gulp.task('default', ['manifest'], function () {
 
 });
 
