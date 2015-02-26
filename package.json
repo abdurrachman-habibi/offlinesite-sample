@@ -4,17 +4,21 @@
   "description": "",
   "main": "",
   "scripts": {
-    "start": "http-server ./app"
+    "start": "node server.js"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "colors": "^1.0.3",
     "gulp": "",
     "gulp-concat": "",
     "gulp-concat-css": "^2.1.0",
     "gulp-manifest": "",
     "gulp-replace": "",
     "gulp-uglify": "^1.1.0",
-    "http-server": ""
+    "http-server": "",
+    "opener": "^1.4.0",
+    "optimist": "^0.6.1",
+    "portfinder": "^0.4.0"
   }
 }

@@ -10,8 +10,8 @@
             if (data) {
                 $mdDialog.show(
                     $mdDialog.alert()
-                        .title('Data Baru')
-                        .content('Data baru tersedia. Halaman akan dimuat ulang')
+                        .title('New Data')
+                        .content('New data is available. Page will be refreshed')
                         .ok('Ok')
                 ).then(function () {
                         $scope.items = data;
